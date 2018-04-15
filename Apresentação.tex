@@ -1,0 +1,96 @@
+\documentclass[presentation, xcolor=table]{beamer}
+
+\mode<presentation>{
+	\usepackage{beamerthemeMadrid}
+	\usepackage{pgf,pgfarrows,pgfnodes,pgfautomata,pgfheaps,pgfshade,pgfpages}
+	\beamertemplatetransparentcovereddynamic
+	\beamertemplateballitem
+	\beamertemplatefootpagenumber
+}
+
+\setbeamertemplate{section in toc}{\inserttocsectionnumber.~\inserttocsection}
+%\setbeameroption{show notes on second screen=right}
+\usepackage[brazil,portuguese]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx, url}
+\usepackage{xcolor}
+\usepackage{adjustbox}
+\usepackage{amsmath,amssymb,amsfonts,amsthm,exscale}
+\usepackage{listingsutf8}	% algoritmos e codigos fonte
+\setbeamertemplate{footline}[frame number]{}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,positioning,calc,fit}
+\usepackage{pgfplots}
+\pgfplotsset{width=1.9\columnwidth, compat=1.14}
+\usepgfplotslibrary{external}
+\usepackage{array}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{N}{@{}m{0pt}@{}}
+\usepackage{arydshln}
+\usepackage{multirow}
+\usepackage{ragged2e}
+
+\usepackage{colortbl}
+\newcommand{\cinza}{\cellcolor[gray]{0.5}}
+
+\let\locdimen\newdimen
+\usepackage{bytefield}
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\title{Análise microeconômica:\\Texas Instruments Inc.}
+\author[Cristiano Matsui, João Victor Pilar, Kallil Miguel, Matheus Ferst]{Cristiano Matsui\inst{1}, João Victor Pilar\inst{1},\\ Kallil Miguel\inst{1}, Matheus Ferst\inst{1}}
+
+\institute[Universidade Tecnológica Federal do Paraná]
+{
+%	Orientador: Prof. Dr. Bruno César Ribas\inst{1}\\
+%	Co-orientador: Prof. Dr. Gustavo Weber Denardin\inst{2}\\ [1 ex]
+	Universidade Tecnológica Federal do Paraná\\[10 ex]
+	\inst{1}
+	Departamento Acadêmico de Informática%\\
+%	\inst{2}
+%	Departamento Acadêmico de Elétrica\\
+}
+
+\setbeamertemplate{itemize items}[default]
+\setbeamertemplate{enumerate items}[default]
+%\apptocmd{\frame}{}{\justifying}{}
+\renewcommand{\raggedright}{\leftskip=0pt \rightskip=10pt plus 0cm}
+
+\date{~}
+
+\begin{document}
+\AtBeginSection[]{
+  \frame<handout:0>{
+    \frametitle{Sumário}
+    \tableofcontents[current,currentsection]
+  }
+}
+
+\begin{frame}
+	\titlepage
+\end{frame}
+
+\begin{frame}
+	\frametitle{Sumário}
+
+	\tableofcontents
+
+	\note{Está apresentação é composta de}
+\end{frame}
+
+\input{tex/Introducao.tex}
+
+\begin{frame}
+	\titlepage
+\end{frame}
+
+\end{document}
+
